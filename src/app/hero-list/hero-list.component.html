@@ -1,0 +1,7 @@
+<h2>My Heroes</h2>
+<p *ngIf="slice.heroesLoading$ | async">loading ...</p>
+<ul class="heroes">
+    <li *ngFor="let hero of slice.heroes$ | async">
+        <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </li>
+</ul>
